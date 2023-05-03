@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/labstack/echo/v4/middleware"
 	"net/http"
 	"sync"
 
@@ -59,6 +60,9 @@ func main() {
 		adminServer: echo.New(),
 		mockServer:  echo.New(),
 	}
+
+	s.adminServer.Use(middleware.CORS())
+	s.mockServer.Use(middleware.CORS())
 
 	// Start the server for registering/de-registering endpoints
 	go func() {

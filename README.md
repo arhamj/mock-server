@@ -11,7 +11,7 @@ The server is intended to be used for testing purposes.
 ## Usage
 
 ```shell
-go run main.go
+go run server/main.go
 ```
 
 ## Admin endpoints
@@ -56,7 +56,7 @@ curl --request GET \
 - [x] Base implementation
 - [ ] Add checks to admin endpoints
 - [ ] Make status code configurable
-- [ ] Adding a simple UI
+- [x] Adding a simple UI
 - [ ] Add a `Dockerfile` and `docker-compose.yml` for one command start
 - [ ] Add a `Makefile` to start server
 - [ ] Save state using a local JSON file
